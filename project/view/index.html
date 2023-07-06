@@ -1,0 +1,21 @@
+{{template "parts/header"}}
+<div id="main_banner">
+    <img src="img/banner.png" alt="banner">
+</div>
+<h3 class="product-title mt-3">Хіти продажу</h3>
+<section class="main-content">
+    <div class="container">
+        <div class="row">
+            {{range .ProductList}}
+                {{template "parts/productCard"}}
+            {{end}}
+        </div>
+    </div>
+</section>
+<div class="info-block">
+    <h4>Про магазин</h4>
+    <p>
+        Вітаємо вас в онлайн магазині. Ми представляємо Вам широкий асортимент якісних, а також ексклюзивних виробів безпосередньо від українських і європейських виробників в наявності і під замовлення. Тепер купити необхідне додому можна всього за кілька хвилин незалежно в якій точці України ви живете.
+    </p>
+</div>
+{{template "parts/footer"}}
