@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"strings"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html/v2"
@@ -19,6 +20,12 @@ func main() {
 			"Title":       "Hello, World!",
 			"ProductList": ProductList,
 		})
+	})
+
+	app.Use([]string{"/delivery", "/about-us"}, func(c *fiber.Ctx) error {
+		page := "pages/" + strings.TrimLeft(c.Path(), "/")
+
+		return c.Render(page, fiber.Map{})
 	})
 
 	app.Static("/img", "./project/img")
