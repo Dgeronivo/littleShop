@@ -175,6 +175,7 @@ img {
     margin-left: 15px;
     padding: 15px;
     height: 20%;
+    border-radius: 3%;
 }
 
 .static-sidebar ul {
