@@ -11,6 +11,7 @@ import (
 const viewPath = "project/view"
 const imgPath = "project/img"
 const stylePath = "project/style"
+const jsPath = "project/js"
 
 // found and log 404
 // catalog page
@@ -53,6 +54,8 @@ func (s *ApiServer) configureRouter() {
 	s.app.Get("/privacy-policy", handlePolicy)
 	s.app.Static("/img", imgPath)
 	s.app.Static("/style", stylePath)
+	s.app.Static("/js", jsPath)
+	s.app.Get("/*", handleDynamic)
 }
 
 func (s *ApiServer) configureLogger() error {
