@@ -1,5 +1,0 @@
-try run proj after move mod and sum.
-1. install golang
-2. install modd:
-go install github.com/cortesi/modd/cmd/modd@latest
-3. install sass
