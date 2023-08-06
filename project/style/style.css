@@ -210,3 +210,14 @@ img {
     -ms-hyphens: auto;
     hyphens: auto;
 }
+
+/* category page */
+
+/* filters */
+#filters {
+    border: 1px solid #666;
+    margin-left: 20px;
+    margin-right: 40px;
+    min-height: 100px;
+    overflow: hidden;
+}

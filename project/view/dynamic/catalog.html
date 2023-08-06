@@ -1,0 +1,38 @@
+{{template "parts/header" . }}
+{{ .Breadcrumbs }}
+<h1>Назва категорії</h1>
+<main class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div id="filters">
+                <div>
+                    <label for="customRange1" class="form-label">Example range123</label>
+                    <input type="range" class="form-range" id="customRange1" min="0" max="1000">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="form-check bg-danger">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Checked checkbox hello bro bra bre oops
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="container">
+                <div class="row">
+                    {{ range .Products}}
+                        {{template "parts/productCard" . }}
+                    {{end}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{template "parts/footer"}}
