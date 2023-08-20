@@ -73,5 +73,7 @@ func (s *ApiServer) listen() error {
 }
 
 func createHtmlEngine() *html.Engine {
-	return html.New(viewPath, ".html")
+	t := html.New(viewPath, ".html")
+	t.Reload(true)
+	return t
 }
